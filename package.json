@@ -1,0 +1,79 @@
+{
+	"name": "snippets-creator",
+	"displayName": "Snippets Creator",
+	"description": "Create snippets quickly from selected code blocks",
+	"version": "1.0.0",
+	"publisher": "claudineyqr",
+	"license": "MIT",
+	"icon": "icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/claudineyqr/vscode-snippets-creator.git"
+	},
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Other",
+		"Snippets"
+	],
+	"keywords": [
+		"snippets",
+		"snippet",
+		"save snippet",
+		"save as snippet",
+		"create snippet",
+		"snippet generator",
+		"snippet creator",
+		"insert snippet"
+	],
+	"activationEvents": [
+		"onCommand:snippets-creator.createSnippet"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "snippets-creator.createSnippet",
+				"title": "Create Snippet"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "snippets-creator.createSnippet",
+					"group": "group1",
+					"when": ""
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.40.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.9.0",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0",
+		"tslint": "^6.1.3"
+	},
+	"dependencies": {
+		"@types/pify": "^3.0.2",
+		"jsonc-parser": "^3.0.0",
+		"pify": "^5.0.0",
+		"ts-dedent": "^2.0.0"
+	}
+}
