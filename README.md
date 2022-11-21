@@ -14,6 +14,10 @@ You can edit created snippet as usual.
 
 ## Release Notes
 
+### 1.0.3
+
+- Improvements validation prefix
+
 ### 1.0.2
 
 - Improvements to PHP Language
