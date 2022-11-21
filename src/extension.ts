@@ -85,7 +85,7 @@ export function activate(context: vscode.ExtensionContext) {
 
       const prefix = await vscode.window.showInputBox({
         placeHolder: "Prefix",
-        prompt: "Enter the snippet prefix [a-z-]:",
+        prompt: "Enter the snippet prefix [0-9a-z-]:",
       });
       if (prefix === undefined || prefix === "") {
         errorMessage("Prefix not provided");
@@ -98,9 +98,10 @@ export function activate(context: vscode.ExtensionContext) {
         prompt: "Enter the snippet name (Optional):",
       });
       if (name === undefined || name === "") {
-        name = prefix;
+        name = snippet.prefix.replace("-", " ");
       }
       snippet.name = name;
+
       snippet.description = await vscode.window.showInputBox({
         placeHolder: "Description",
         prompt: "Enter the snippet description (Optional):",
