@@ -14,6 +14,11 @@ You can edit created snippet as usual.
 
 ## Release Notes
 
+### 1.0.2
+
+- Improvements to PHP Language
+- Optional Name Snippet
+
 ### 1.0.0
 
 - Initial release
