@@ -2,7 +2,7 @@
 	"name": "snippets-creator",
 	"displayName": "Snippets Creator",
 	"description": "Create snippets quickly from selected code blocks",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publisher": "claudineyqr",
 	"license": "MIT",
 	"icon": "icon.png",

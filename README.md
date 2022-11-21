@@ -14,6 +14,10 @@ You can edit created snippet as usual.
 
 ## Release Notes
 
+### 1.0.4
+
+- Improvements dollar escape for PHP, javascript, typeScript
+
 ### 1.0.3
 
 - Improvements validation prefix
