@@ -107,11 +107,15 @@ export function activate(context: vscode.ExtensionContext) {
         prompt: "Enter the snippet description (Optional):",
       });
 
-      const languagesScapeDollarSign: string[] = ["php"];
+      const languagesScapeDollarSign: string[] = [
+        "php",
+        "javascript",
+        "typescript",
+      ];
       if (languagesScapeDollarSign.includes(snippet.languageId)) {
         let newBody: string[] = [];
         snippet.body.forEach((bodyItem: string) => {
-          let newBodyItem: string = bodyItem.replace("$", "$$$");
+          const newBodyItem: string = bodyItem.replace(/\$/gim, "\\$");
           newBody.push(newBodyItem);
         });
         snippet.body = newBody;
